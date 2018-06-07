@@ -1,0 +1,40 @@
+.chip-container {
+    max-width: 200px;
+  }
+
+
+  .dark-background {
+    background-color: black;
+}
+.my-box {
+    border: 2px red solid;
+    height: 40px;
+}
+.my-container {
+    background-color: beige;
+    padding: 1em;
+    width: 100vw;
+    height: 100vh;
+    
+    .movie-card {
+        overflow: auto;
+        min-width: 250px;
+        margin: 1em;
+    }
+
+}
+
+$size: 18px;
+.test-sass {
+    font-size: $size;
+    h1 {
+        color:red;
+    }
+}
+
+.description {
+    color: green;
+    span {
+        color:violet;
+    }
+}
