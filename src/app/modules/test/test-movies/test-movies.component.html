@@ -1,1 +1,8 @@
-{{movies | json}}}
+<h1>Movies</h1>
+<div *ngFor='let movie of movies; let i=index'>
+  <mat-card class="movie-card">
+    <mat-card-header>
+      <mat-card-title class="title-card">{{movie}}</mat-card-title>
+    </mat-card-header>
+  </mat-card>
+</div>

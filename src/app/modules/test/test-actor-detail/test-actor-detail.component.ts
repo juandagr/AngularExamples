@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActorService } from '../services/actor.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-test-actor-detail',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestActorDetailComponent implements OnInit {
 
-  constructor() { }
+  actor:any;
+private sub:any;
+
+  constructor(
+    private actorService:ActorService,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+    this.sub= this.route.params.subscribe(
+      params => {
+        let id:number = +params['id'];
+        this.actor = this.actorService.get(id);
+      }
+    )
   }
 
 }

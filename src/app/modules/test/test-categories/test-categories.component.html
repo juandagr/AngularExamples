@@ -1,3 +1,8 @@
-<p>
-  test-categories works!
-</p>
+<h1>Categories</h1>
+<div *ngFor='let category of categories; let i=index'>
+  <mat-card class="movie-card">
+    <mat-card-header>
+      <mat-card-title class="title-card">{{category}}</mat-card-title>
+    </mat-card-header>
+  </mat-card>
+</div>

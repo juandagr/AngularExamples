@@ -1,3 +1,8 @@
-<p>
-  test-actors works!
-</p>
+<h1>Actors</h1>
+<div *ngFor='let actor of actors; let i=index'>
+  <mat-card class="movie-card">
+    <mat-card-header>
+      <mat-card-title class="title-card" [routerLink]="['/actor', i]">{{actor.name}}</mat-card-title>
+    </mat-card-header>
+  </mat-card>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoryService } from '../services/category.service';
 
 @Component({
   selector: 'app-test-categories',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestCategoriesComponent implements OnInit {
 
-  constructor() { }
+  categories:any[];
+  constructor(private categoryService:CategoryService) { }
 
   ngOnInit() {
+    this.categories = this.categoryService.getItems();
   }
 
 }

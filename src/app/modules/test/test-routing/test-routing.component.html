@@ -1,1 +1,20 @@
-<app-test-movies></app-test-movies>
+<!--<app-test-movies></app-test-movies>
+<app-test-countries></app-test-countries>
+<app-test-categories></app-test-categories>
+<app-test-actors></app-test-actors>-->
+
+
+<mat-sidenav-container class="example-container">
+  <mat-sidenav mode="side" opened>
+    <ul>
+        <li><a routerLink='/actors'>Actors</a></li><br/>
+        <li><a routerLink='/categories'>Categories</a></li><br/>
+        <li><a routerLink='/countries'>Countries</a></li><br/>
+        <li><a routerLink='/movies'>Movies</a></li><br/>
+      
+    </ul>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

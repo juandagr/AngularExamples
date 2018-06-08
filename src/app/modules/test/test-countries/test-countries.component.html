@@ -1,3 +1,8 @@
-<p>
-  test-countries works!
-</p>
+<h1>Countries</h1>
+<div *ngFor='let country of countries; let i=index'>
+    <mat-card class="movie-card">
+      <mat-card-header>
+        <mat-card-title class="title-card">{{country}}</mat-card-title>
+      </mat-card-header>
+    </mat-card>
+  </div>

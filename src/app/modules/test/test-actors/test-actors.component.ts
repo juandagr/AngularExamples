@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActorService } from '../services/actor.service';
 
 @Component({
   selector: 'app-test-actors',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestActorsComponent implements OnInit {
 
-  constructor() { }
+  actors:any[];
+  constructor(private actorService:ActorService) { }
 
   ngOnInit() {
+    this.actors = this.actorService.getItems();
   }
 
 }
