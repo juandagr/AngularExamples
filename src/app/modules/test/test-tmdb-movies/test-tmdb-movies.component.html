@@ -1,0 +1,8 @@
+<h1>Movies</h1>
+<div *ngFor='let movie of movies; let i=index'>
+  <mat-card class="movie-card">
+    <mat-card-header>
+      <mat-card-title class="title-card" [routerLink]="['/tmdb/credits', movie.id]">{{movie.title}}</mat-card-title>
+    </mat-card-header>
+  </mat-card>
+</div>

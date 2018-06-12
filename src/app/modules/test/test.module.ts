@@ -16,10 +16,15 @@ import { TestRoutingComponent } from './test-routing/test-routing.component';
 import { TestMoviesComponent } from './test-movies/test-movies.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { TestActorDetailComponent } from './test-actor-detail/test-actor-detail.component';
+import { HttpClientModule } from '@angular/common/http';
+import {HttpModule} from '@angular/http';
+import { TestTmdbMoviesComponent } from './test-tmdb-movies/test-tmdb-movies.component';
+import { TestTmdbCreditsComponent } from './test-tmdb-credits/test-tmdb-credits.component';
 
 @NgModule({
   imports: [
     CommonModule,
+    HttpModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
     MatButtonModule, MatCheckboxModule,
@@ -49,9 +54,19 @@ import { TestActorDetailComponent } from './test-actor-detail/test-actor-detail.
         path: 'actor/:id',
         component: TestActorDetailComponent
       },
+
+      {
+        path: 'tmdb/movies',
+        component: TestTmdbMoviesComponent
+      },
+
+      {
+        path: 'tmdb/credits/:idMovie',
+        component: TestTmdbCreditsComponent
+      },
     ])
   ],
-  declarations: [UiTestCardComponent, TestServicesComponent, TestCategoriesComponent, TestCountriesComponent, TestActorsComponent, TestRoutingComponent, TestMoviesComponent, TestActorDetailComponent],
-  exports: [UiTestCardComponent, TestServicesComponent, TestCategoriesComponent, TestCountriesComponent, TestActorsComponent, TestRoutingComponent, TestMoviesComponent, TestActorDetailComponent]
+  declarations: [UiTestCardComponent, TestServicesComponent, TestCategoriesComponent, TestCountriesComponent, TestActorsComponent, TestRoutingComponent, TestMoviesComponent, TestActorDetailComponent, TestTmdbMoviesComponent, TestTmdbCreditsComponent],
+  exports: [UiTestCardComponent, TestServicesComponent, TestCategoriesComponent, TestCountriesComponent, TestActorsComponent, TestRoutingComponent, TestMoviesComponent, TestActorDetailComponent, TestTmdbMoviesComponent, TestTmdbCreditsComponent]
 })
 export class TestModule { }

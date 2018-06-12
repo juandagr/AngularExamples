@@ -1,0 +1,8 @@
+<h1>Movies</h1>
+<div *ngFor='let person of cast; let i=index'>
+  <mat-card class="movie-card">
+    <mat-card-header>
+      <mat-card-title class="title-card" >{{person.name}} as {{person.character}}</mat-card-title>
+    </mat-card-header>
+  </mat-card>
+</div>

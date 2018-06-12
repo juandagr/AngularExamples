@@ -16,25 +16,25 @@ export class ActorService {
       birthday: new Date(1986, 5,3)
     },
     {
-      id: 1,
+      id: 2,
       name: 'Angelina Jolie',
       nationality: "USA",
       birthday: new Date(1982, 2,2)
     },
     {
-      id: 1,
+      id: 3,
       name: 'Sylvester Stallone',
       nationality: "USA",
       birthday: new Date(1967, 1,22)
     },
     {
-      id: 1,
+      id: 4,
       name: 'Antonio Sanint',
       nationality: "Colombia",
       birthday: new Date(1975, 7,14)
     },
     {
-      id: 1,
+      id: 5,
       name: 'Carolina Gómez',
       nationality: "American",
       birthday: new Date(1989, 3,19)
