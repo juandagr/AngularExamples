@@ -22,12 +22,12 @@ export class TestTmdbCreditsComponent implements OnInit {
     this.routerSubscribe = this.route.params.subscribe(params =>{
       let idMovie:number = +params['idMovie'];
       this.tmdbCreditsService.getCredits(idMovie).subscribe(
-        (data: Response ) =>{
-          console.log(data.json());
-          this.cast=data.json().cast;
+        (data: any ) =>{
+          console.log(data);
+          this.cast=data;
         },
-        (error: Response) => {
-          console.log(error.json())
+        (error: any) => {
+          console.log(error);
         }
       )
     })

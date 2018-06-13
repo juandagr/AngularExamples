@@ -15,14 +15,11 @@ export class TestTmdbMoviesComponent implements OnInit {
 
   ngOnInit() {
     this.tmdbMoviesService.getMovies().subscribe(
-      (data: Response ) =>{
-        console.log(data.json());
-
-        const movies =data.json();
-        this.movies = movies.results;
+      (data: any ) =>{
+        this.movies = data;
       },
-      (error: Response) => {
-        console.log(error.json())
+      (error: any) => {
+        console.log(error)
       }
     )
   }

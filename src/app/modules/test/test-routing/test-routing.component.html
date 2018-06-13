@@ -3,19 +3,32 @@
 <app-test-categories></app-test-categories>
 <app-test-actors></app-test-actors>-->
 
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body>
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav mode="side" opened="true">
+      <ul>
+          <li><a routerLink='/actors'>Actors</a></li><br/>
+          <li><a routerLink='/categories'>Categories</a></li><br/>
+          <li><a routerLink='/countries'>Countries</a></li><br/>
+          <li><a routerLink='/movies'>Movies</a></li><br/>
+          <li><a routerLink='/tmdb/movies'>Tmdb movies</a></li><br/>
+        
+      </ul>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</body>
+</html>
 
-<mat-sidenav-container class="example-container">
-  <mat-sidenav mode="side" opened="true">
-    <ul>
-        <li><a routerLink='/actors'>Actors</a></li><br/>
-        <li><a routerLink='/categories'>Categories</a></li><br/>
-        <li><a routerLink='/countries'>Countries</a></li><br/>
-        <li><a routerLink='/movies'>Movies</a></li><br/>
-        <li><a routerLink='/tmdb/movies'>Tmdb movies</a></li><br/>
-      
-    </ul>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container>

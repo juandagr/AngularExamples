@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
@@ -16,7 +17,6 @@ import { TestRoutingComponent } from './test-routing/test-routing.component';
 import { TestMoviesComponent } from './test-movies/test-movies.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { TestActorDetailComponent } from './test-actor-detail/test-actor-detail.component';
-import { HttpClientModule } from '@angular/common/http';
 import {HttpModule} from '@angular/http';
 import { TestTmdbMoviesComponent } from './test-tmdb-movies/test-tmdb-movies.component';
 import { TestTmdbCreditsComponent } from './test-tmdb-credits/test-tmdb-credits.component';
@@ -24,6 +24,7 @@ import { TestTmdbCreditsComponent } from './test-tmdb-credits/test-tmdb-credits.
 @NgModule({
   imports: [
     CommonModule,
+    HttpClientModule,
     HttpModule,
     BrowserAnimationsModule,
     FlexLayoutModule,

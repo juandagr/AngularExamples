@@ -1,8 +1,21 @@
 <h1>Movies</h1>
-<div *ngFor='let person of cast; let i=index'>
-  <mat-card class="movie-card">
-    <mat-card-header>
-      <mat-card-title class="title-card" >{{person.name}} as {{person.character}}</mat-card-title>
-    </mat-card-header>
-  </mat-card>
+<div class="cards">
+  <div *ngFor='let person of cast; let i=index'>
+    <mat-card class="card">
+      <mat-card-header>
+        <mat-card-title class="title-card" >{{person.name}} as {{person.character}} </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+          <div *ngIf = 'person.profile_path; then trueB else falseB'></div>
+      <ng-template #trueB>
+          <img src="https://image.tmdb.org/t/p/w185/{{person.profile_path}}" title="{{person.name}}" alt="">
+      </ng-template>
+      <ng-template #falseB>
+          <i class="material-icons">face</i>
+      </ng-template>
+        
+        
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>
